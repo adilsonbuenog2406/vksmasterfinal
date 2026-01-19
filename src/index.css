@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans bg-navy-900 text-white;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(15, 118, 110, 0.15), rgba(0, 0, 0, 0)),
+    radial-gradient(circle at 85% 10%, rgba(54, 83, 112, 0.18), rgba(0, 0, 0, 0)),
+    linear-gradient(135deg, #0c2939 0%, #071626 55%, #071524 100%);
+  min-height: 100vh;
+}
+
+a {
+  @apply text-white;
+}
+
+/* ==============================
+   Light Sections (override global dark text)
+   ============================== */
+.theme-light {
+  color: #0f172a; /* slate-900 */
+}
+
+.theme-light p {
+  color: #475569; /* slate-600 */
+}
+
+.theme-light a {
+  color: #059669; /* emerald-600 */
+}
+
+.theme-light a:hover {
+  color: #047857; /* emerald-700 */
+}
+
+.glass {
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.glass-dark {
+  backdrop-filter: blur(14px);
+  background: rgba(13, 27, 45, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section {
+  @apply py-20 md:py-24;
+}
+
+.grid-overlay {
+  position: relative;
+}
+
+.grid-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.4;
+}
+
+.diagonal-mask {
+  background: linear-gradient(
+    135deg,
+    rgba(12, 38, 52, 0.82) 0%,
+    rgba(9, 27, 44, 0.94) 60%,
+    rgba(9, 27, 44, 0.98) 100%
+  );
+}
+
+.watermark {
+  background-image: url('/assets/driveVKS/element/glass_vks.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.12;
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, rgba(19, 39, 63, 0.85) 0%, rgba(14, 27, 45, 0.92) 100%);
+}
+
+.triad-icon {
+  box-shadow: 0 0 34px rgba(210, 168, 108, 0.35);
+}
+
+.scroll-indicator {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* ==============================
+   VKS Watermarks (Hero / Footer)
+   ============================== */
+
+/* HERO: esquerda -> direita sumindo, pausa invisível, volta direita -> esquerda reaparecendo */
+@keyframes vksPingPongContinuous {
+  /* início: na esquerda, visível */
+  0% {
+    transform: translate3d(-90px, 0, 0);
+    opacity: 0.30;
+  }
+
+  /* esquerda -> direita (vai sumindo devagar) */
+  40% {
+    transform: translate3d(90px, 0, 0);
+    opacity: 0;
+  }
+
+  /* pausa invisível (equivale a ~2s dentro do ciclo) */
+  60% {
+    transform: translate3d(90px, 0, 0);
+    opacity: 0;
+  }
+
+  /* reaparece na direita (rápido) */
+  63% {
+    transform: translate3d(90px, 0, 0);
+    opacity: 0.30;
+  }
+
+  /* direita -> esquerda (contínuo e visível, sem sumir) */
+  100% {
+    transform: translate3d(-90px, 0, 0);
+    opacity: 0.30;
+  }
+}
+
+.vks-watermark-hero-loop {
+  animation: vksPingPongContinuous 14s linear infinite;
+  will-change: transform, opacity;
+}
+
+/* FOOTER: visível o tempo todo, só flutuando lateralmente */
+@keyframes vksFooterLoop {
+  0% {
+    transform: translateX(14%);
+  }
+  50% {
+    transform: translateX(-8%);
+  }
+  100% {
+    transform: translateX(14%);
+  }
+}
+
+.vks-watermark-footer-loop {
+  opacity: 0.30; /* sempre visível */
+  animation: vksFooterLoop 10s linear infinite;
+  will-change: transform;
+}
