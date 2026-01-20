@@ -39,7 +39,7 @@ const ArtigosNoticias = () => {
             return (
               <article
                 key={`${post.title}-${index}`}
-                className="group h-full overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
                 <div className="aspect-video overflow-hidden bg-slate-100">
                   <img
@@ -50,32 +50,25 @@ const ArtigosNoticias = () => {
                   />
                 </div>
 
-                <div className="p-6">
-                  <div className="mb-4 flex items-center justify-between gap-3">
-                    <span
-                      className={[
-                        'inline-flex items-center justify-center rounded-md px-2 py-0.5 text-xs font-semibold transition-colors',
-                        tagClass(post.tag)
-                      ].join(' ')}
-                    >
-                      #{normalizeTag(post.tag)}
-                    </span>
-
+                <div className="flex h-full flex-col justify-between gap-3 p-6">
+                  <div className="flex items-center justify-between gap-3">
                     <span className="text-sm text-slate-500 whitespace-nowrap">
                       {post.date}
                     </span>
                   </div>
 
-                  <h3 className="mb-3 text-xl font-semibold leading-snug text-slate-900 transition-colors group-hover:text-emerald-600">
+                  <h3 className="text-xl font-semibold leading-snug text-slate-900 transition-colors group-hover:text-emerald-600">
                     {post.title}
                   </h3>
 
-                  <p className="mb-4 text-sm md:text-base leading-relaxed text-slate-600">
+                  <p className="text-sm md:text-base leading-relaxed text-slate-600">
                     {post.excerpt}
                   </p>
 
                   <a
                     href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm font-semibold transition-colors"
                     aria-label={`Ler artigo: ${post.title}`}
                   >

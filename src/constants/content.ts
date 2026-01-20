@@ -150,55 +150,54 @@ export const socios = [
 
 export const artigos = [
   {
-    tag: '#ambiental',
-    date: '15 Nov 2024',
-    title: 'Licenciamento Ambiental: desafios e oportunidades em 2024',
-    excerpt:
-      'Análise das mudanças recentes na legislação ambiental e seus impactos em projetos de infraestrutura.',
+    tag: '#urbanístico',
+    date: '03 Out 2024',
+    title: 'Ajustamento de conduta como instrumento de regularização urbanística',
+    excerpt: 'Como o TAC pode viabilizar a regularização urbanística com segurança jurídica.',
     image: '/assets/driveVKS/artigos/at1.jpg',
-    href: '#'
-  },
-  {
-    tag: '#imobiliário',
-    date: '08 Nov 2024',
-    title: 'Regularização Fundiária: novo marco legal e aplicações práticas',
-    excerpt:
-      'Como a nova legislação de regularização fundiária impacta proprietários e incorporadores.',
-    image: '/assets/driveVKS/artigos/at2.jpg',
-    href: '#'
-  },
-  {
-    tag: '#urbanístico',
-    date: '02 Nov 2024',
-    title: 'Planos Diretores Municipais: participação e planejamento urbano',
-    excerpt:
-      'A importância da participação social na elaboração de planos diretores sustentáveis.',
-    image: '/assets/driveVKS/artigos/at3.jpg',
-    href: '#'
+    href: 'https://www.migalhas.com.br/depeso/416445/ajustamento-de-conduta-como-instrumento-de-regularizacao-urbanistica'
   },
   {
     tag: '#ambiental',
-    date: '28 Out 2024',
-    title: 'ESG no setor imobiliário: tendências e compliance',
-    excerpt: 'Como implementar práticas ESG em empreendimentos imobiliários de grande porte.',
-    image: '/assets/driveVKS/artigos/at4.jpg',
-    href: '#'
+    date: '08 Out 2024',
+    title: 'Saneamento básico no Brasil: Caminho para a universalização sustentável?',
+    excerpt:
+      'O novo marco do saneamento básico busca universalizar os serviços de forma sustentável no Brasil.',
+    image: '/assets/driveVKS/artigos/at2.jpg',
+    href: 'https://www.migalhas.com.br/depeso/416801/saneamento-basico-no-brasil-caminho-para-universalizacao-sustentavel'
   },
   {
     tag: '#urbanístico',
-    date: '22 Out 2024',
-    title: 'Zoneamento urbano e direito de construir',
-    excerpt: 'Aspectos jurídicos do zoneamento e sua relação com o direito de propriedade.',
-    image: '/assets/driveVKS/artigos/at5.jpg',
-    href: '#'
+    date: '15 Jun 2024',
+    title: 'Retrofit: uma solução urbana para regenerar',
+    excerpt:
+      'Requalificação de edificações antigas, preservando a arquitetura e modernizando instalações para atender necessidades atuais.',
+    image: '/assets/driveVKS/artigos/at3.jpg',
+    href: 'https://www.linkedin.com/pulse/retrofit-uma-solu%C3%A7%C3%A3o-urbana-para-regenerar-famcf/'
   },
   {
-    tag: '#empresarial',
-    date: '15 Out 2024',
-    title: 'Due Diligence Ambiental em operações de M&A',
-    excerpt: 'Checklist essencial para avaliação de passivos ambientais em fusões e aquisições.',
+    tag: '#urbanístico',
+    date: '01 Jan 2023',
+    title: 'Competência municipal para a aprovação ambiental da Reurb em APPs',
+    excerpt: 'Limites e responsabilidades na regularização fundiária em áreas de preservação.',
+    image: '/assets/driveVKS/artigos/at4.jpg',
+    href: 'https://www.conjur.com.br/2023-jan-01/bruno-kryminice-competencia-aprovacao-reurb-apps/'
+  },
+  {
+    tag: '#ambiental',
+    date: '20 Jan 2023',
+    title: 'Apuração de infrações ambientais e o Decreto federal nº 11.373/2023',
+    excerpt: 'Atualizações normativas e seus impactos na responsabilização ambiental.',
+    image: '/assets/driveVKS/artigos/at5.jpg',
+    href: 'https://www.conjur.com.br/2023-jan-20/bruno-kryminice-infracoes-ambientais-decreto-113732023/'
+  },
+  {
+    tag: '#ambiental',
+    date: '01 Jan 2023',
+    title: '25 anos do SNUC: conservação da natureza e a luta contra a crise climática',
+    excerpt: 'O papel do sistema de unidades de conservação frente à emergência climática.',
     image: '/assets/driveVKS/artigos/at6.jpg',
-    href: '#'
+    href: 'https://www.conjur.com.br/2025-jul-18/25-anos-do-snuc-conservacao-da-natureza-e-a-luta-contra-a-crise-climatica/'
   }
 ];
 
