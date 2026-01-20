@@ -211,13 +211,6 @@ export const midiaSlides = [
     logo: '/assets/driveVKS/midia/parana.jpg',
   },
   {
-    title: 'Estadão',
-    date: '12 Nov 2024',
-    description: 'Especialistas analisam impactos da reforma urbanística',
-    link: '#',
-    logo: '/assets/driveVKS/midia/estadao.png',
-  },
-  {
    title: 'Gazeta da Semana',
     date: '04 Set 2025',
     description: 'Escritório curitibano adota novo nome e amplia atuação em áreas estratégicas',

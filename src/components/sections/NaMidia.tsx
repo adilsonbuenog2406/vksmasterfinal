@@ -159,7 +159,7 @@ const NaMidia = () => {
                         <div
                           className={[
                             'flex items-center justify-center w-full h-[74px] md:h-[78px] mb-4 bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden',
-                            isInfoMoney ? 'px-2 py-2' : 'px-5 py-3',
+
                           ].join(' ')}
                         >
                           <img
