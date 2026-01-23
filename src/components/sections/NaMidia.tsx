@@ -196,6 +196,30 @@ const NaMidia = () => {
               })}
             </div>
           </div>
+
+          <div className="mt-6 flex items-center justify-center gap-3 lg:hidden">
+            <button
+              type="button"
+              onClick={prev}
+              aria-label="Anterior"
+              disabled={!canSlide}
+              className="flex items-center justify-center w-11 h-11 rounded-full bg-white/20 backdrop-blur-xl border border-white/40 shadow-lg hover:bg-white/30 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              style={{ boxShadow: 'rgba(0, 0, 0, 0.30) 0px 8px 32px, rgba(255, 255, 255, 0.20) 0px 0px 20px inset' }}
+            >
+              <ChevronLeft className="w-6 h-6 text-white/80" />
+            </button>
+
+            <button
+              type="button"
+              onClick={next}
+              aria-label="Proximo"
+              disabled={!canSlide}
+              className="flex items-center justify-center w-11 h-11 rounded-full bg-white/20 backdrop-blur-xl border border-white/40 shadow-lg hover:bg-white/30 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              style={{ boxShadow: 'rgba(0, 0, 0, 0.30) 0px 8px 32px, rgba(255, 255, 255, 0.20) 0px 0px 20px inset' }}
+            >
+              <ChevronRight className="w-6 h-6 text-white/80" />
+            </button>
+          </div>
         </div>
       </Container>
     </section>

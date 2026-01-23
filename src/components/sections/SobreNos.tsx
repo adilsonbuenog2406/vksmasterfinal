@@ -8,8 +8,13 @@ const SobreNos = () => {
       {/* Background Vimeo (substitui vídeo local pesado) */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <iframe
-            src="https://player.vimeo.com/video/1151571452?background=1&autoplay=1&muted=1&loop=1&autopause=0&title=0&byline=0&portrait=0&badge=0&dnt=1"
+          <video
+            src="/assets/videos/socios-comp.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             referrerPolicy="strict-origin-when-cross-origin"

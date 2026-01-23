@@ -4,24 +4,24 @@ import Button from '../ui/Button';
 
 const Hero = () => {
   const watermarkSrc = '/assets/driveVKS/element/glass_vks.png';
-
-  // Vimeo video id: 1151571974
-  const vimeoSrc =
-    'https://player.vimeo.com/video/1151571974?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1&background=1';
+ 
+  const videoSrc = '/assets/videos/img-comp.mp4';
 
   return (
     <section
       id="inicio"
       className="relative isolate flex min-h-screen items-center overflow-hidden bg-hero bg-cover bg-center"
     >
-      {/* Background Vimeo */}
+      {/* Background video */}
       <div className="absolute inset-0 -z-10 overflow-hidden bg-black">
-        <iframe
-          src={vimeoSrc}
+        <video
+          src={videoSrc}
           title="IMAGENS COMPILADO"
-          frameBorder={0}
-          allow="autoplay; fullscreen; picture-in-picture"
-          referrerPolicy="strict-origin-when-cross-origin"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
           className="
             pointer-events-none
             absolute left-1/2 top-1/2
